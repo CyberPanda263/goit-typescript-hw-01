@@ -3,10 +3,15 @@
         likes: number,
         accounts: string[],
         status: string,
-        details?: object,
+        details?: IDetails,
     }
 
-    const page1:page = {
+    interface IDetails {
+        createAt: Date,
+        updateAt: Date,
+    }
+
+    const page1: page = {
           title: 'The awesome page',
           likes: 100,
           accounts: ['Max', 'Anton', 'Nikita'],
@@ -17,7 +22,7 @@
           }
         }
         
-        const page2:page = {
+        const page2: page = {
           title: 'Python or Js',
           likes: 5,
           accounts: ['Alex'],
